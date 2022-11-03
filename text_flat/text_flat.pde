@@ -1,7 +1,8 @@
 //Global Variables
 int appWidth, appHeight, fontSize;
-String title = "wahoo";
+String title = "wahoo!", footer="drip";
 float titleX, titleY, titleWidth, titleHeight;
+float footerX, footerY, footerWidth, footerHeight;
 PFont titleFont;
 color purple=#C789CE, resetDefaultInk=#FFFFFF; //Not night mode friendly
 //
@@ -24,6 +25,7 @@ titleFont = createFont("Candara Bold Italic", 57); //verify the font exists in p
 //
 //Layout our text space and typographical features
 rect(titleX, titleY, titleWidth, titleHeight);
+rect(footerX, footerY, footerWidth, footerHeight);
 //
 //Text Draw: Repeatedly Executed Code
 fill(purple); //Ink
@@ -32,5 +34,6 @@ textAlign(CENTER, CENTER); //Alogn X&Y, see prossesing.org / Reference
 fontSize = 50 ;
 textFont(titleFont, fontSize);
 text( title, titleX, titleY, titleWidth, titleHeight);
+text( footer, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
 //End Main Program
